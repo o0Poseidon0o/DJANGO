@@ -50,17 +50,14 @@ def index_3(request):
              'e':'5',
         }
     ]
-    test={ 'a':'1',
-             'b':'1',
-             'c':'1',
-             'd':'1',
-             'e':'1',}
+    
    
     return render(request,'fristapp/index.html',{
         'DTB':dtb,
         'sanpham':sanpham,
         'COT':cot,
-        'dong':dong,
-        'test':test,     
+        'dong':dong,    
         'ten':ten,
     })
+def demo_static(request):
+    return render(request, 'fristapp/stactic.html')
