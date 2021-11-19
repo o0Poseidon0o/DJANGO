@@ -56,6 +56,7 @@ class Nhanvienkd(Nhanvien):
 class Nhanviensx(Nhanvien):
     def __init__(self, _hoten, _hsl, _giacanh, _thulao, _luongcoban):
         super().__init__(_hoten, _hsl, _giacanh, _thulao, _luongcoban)
+        
 
     def __del__(self):
         pass

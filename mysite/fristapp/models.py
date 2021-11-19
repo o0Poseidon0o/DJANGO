@@ -13,8 +13,13 @@ class Website(models.Model):
 
     def __str__(self):
         return self.name
-class Test(models.Model):
-    ma_so=models.AutoField(primary_key=True)
-    ten=models.CharField(max_length=150, unique=True)
+class content(models.Model):
+    website=models.ForeignKey(Website, on_delete=models.PROTECT)
+    name=name=models.CharField(max_length=250, unique=True)
+    content=models.TextField()
+    image=models.ImageField(upload_to='fristapp/image')
+
     def __str__(self):
         return self.name
+
+

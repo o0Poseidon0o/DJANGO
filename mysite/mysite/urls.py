@@ -18,8 +18,10 @@ from django.urls import path,include
 from fristapp import views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('fristapp.urls')),
-    path('stactic/', views.demo_static)
+    path('stactic/', views.demo_static),
+    path('websitetest',views.websitetest)
 ]

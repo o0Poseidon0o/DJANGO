@@ -1,10 +1,20 @@
 from django.shortcuts import render, HttpResponse
+from fristapp.models import Category,Website,content
 
 # Create your views here.
 def index(request):
     return HttpResponse ('Chao ca lop')
 def products(request):
     return HttpResponse ('danh sach san pham')
+def websitetest(request):
+    websites=Website.objects.order_by('name') #muon sap xe theo cot nao
+    print(websites)
+    return render(request, 'fristapp/websitetest.html',{
+        'a':websites, #tao dic
+    })
+def content(request):
+
+    return render(request,'fristapp/content.html')
 def product(request,id_product):
     ketqua= 'ban dang xem san pham %i' %id_product
     return HttpResponse(ketqua)
