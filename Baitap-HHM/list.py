@@ -1,0 +1,9 @@
+list=[0,1,3,11,45,23,30]
+print(list)
+list2=['tao','buoi','le']
+print(list2)
+list.extend('hong')
+list.extend(list2)
+list2.sort(key=len,reverse=True)
+print(list)
+print(list2)
