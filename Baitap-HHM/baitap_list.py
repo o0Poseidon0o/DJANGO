@@ -33,3 +33,4 @@ print('So lon nhat cua list 4 la: ',max(list4))
 print('So nho naht trong list 4 la: ',min(list4))
 list5=list4.copy()
 print('Bai 10:List duoc copy: ',list5)
+
