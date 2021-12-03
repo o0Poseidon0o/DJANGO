@@ -42,3 +42,18 @@ def dthinhchunhat(a,b):
 def dthinhtron(r):
     dt=r*r*3.14
     print('dien tich hinh tron: ', dt)
+
+def giaithua(n): #ham tinh giai thua theo de quy
+    if n<0:
+        return 0
+    else:
+        if n==0:
+            return 1
+        else:
+            return n*giaithua(n-1)
+
+def kiemtraconamtrongso(n):
+    if n in list(range(3,9)):
+        print ('co nam trong khoang nay!!!')
+    else:
+        print ('khong nam trong khoang nay!!!')
