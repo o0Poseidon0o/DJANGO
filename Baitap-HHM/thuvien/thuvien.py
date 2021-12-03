@@ -35,3 +35,10 @@ def kiemtranguyenduong(n):
         print('Nhap lai!!!!')
         break
     n=int(input('Nhap vao so nguyen duong!!!'))
+
+def dthinhchunhat(a,b):
+    dt=a*b
+    print('dien tich hinh chu nhat: {}'.format(dt))
+def dthinhtron(r):
+    dt=r*r*3.14
+    print('dien tich hinh tron: ', dt)
