@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,7 +10,7 @@
         <meta content="eCommerce HTML Template Free Download" name="description">
 
         <!-- Favicon -->
-        <link href="{% static 'store/' %}img/favicon.ico" rel="icon">
+        <link href="{% static 'store/img/favicon.ico' %}" rel="icon">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
@@ -55,29 +54,22 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="product-list.html" class="nav-item nav-link">Products</a>
-                            <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>
-                            <a href="cart.html" class="nav-item nav-link">Cart</a>
-                            <a href="checkout.html" class="nav-item nav-link">Checkout</a>
-                            <a href="my-account.html" class="nav-item nav-link">My Account</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
-                                <div class="dropdown-menu">
-                                    <a href="wishlist.html" class="dropdown-item">Wishlist</a>
-                                    <a href="login.html" class="dropdown-item">Login & Register</a>
-                                    <a href="contact.html" class="dropdown-item">Contact Us</a>
-                                </div>
-                            </div>
+                            <a href="{% url 'store:index' %}" class="nav-item nav-link">Trang chủ</a>
+                            <a href="{% url 'store:subcategory' 0 %}" class="nav-item nav-link">Sản phẩm</a>
+                            <a href="{% url 'store:contact' %}" class="nav-item nav-link">Liên hệ</a>
                         </div>
                         <div class="navbar-nav ml-auto">
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
-                                <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Login</a>
-                                    <a href="#" class="dropdown-item">Register</a>
+                            {% if session_status %}
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ session_info.ho }} {{ session_info.ten }}</a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item">Thông tin của tôi</a>
+                                        <a href="{% url 'customer:logout' %}" class="dropdown-item">Đăng xuất</a>
+                                    </div>
                                 </div>
-                            </div>
+                            {% else %}
+                                <a href="{% url 'customer:login' %}" class="nav-item nav-link">Đăng nhập</a>
+                            {% endif %}
                         </div>
                     </div>
                 </nav>
@@ -91,8 +83,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="index.html">
-                                <img src="img/logo.png" alt="Logo">
+                            <a href="{% url 'store:index' %}">
+                                <img src="{% static 'store/img/logo.png' %}" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -117,14 +109,14 @@
                 </div>
             </div>
         </div>
-        <!-- Bottom Bar End -->  
-
-        {{% block main_content %}
-        {% endblock main_content %}}
+        <!-- Bottom Bar End --> 
 
 
+        {% block main_content %}
+        {% endblock %}
 
-<!-- Footer Start -->
+
+        <!-- Footer Start -->
         <div class="footer">
             <div class="container-fluid">
                 <div class="row">
@@ -224,5 +216,16 @@
         
         <!-- Template Javascript -->
         <script src="{% static 'store/js/main.js' %}"></script>
+
+        <script>
+            jQuery(function ($) {
+                let path = window.location.href;
+                $('a').each(function () {
+                    if (this.href === path){
+                        $(this).addClass('active')
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
