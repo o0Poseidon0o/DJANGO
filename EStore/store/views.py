@@ -2,10 +2,14 @@ from django.shortcuts import render
 from store.models import Category, SubCategory, Product
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from store.forms import *
+from cart.cart import Cart
 
 
 # Create your views here.
 def index(request):
+    # Giỏ hàng
+    cart = Cart(request)
+
     # Đọc danh sách sản phẩm
     # Thiết bị gia đình
     subcategory_tbgd = SubCategory.objects.filter(category=1).values_list('id')
@@ -24,6 +28,7 @@ def index(request):
     return render(request, 'store/index.html', {
         'list_product_ddnb': list_product_ddnb,
         'list_product_tbgd': list_product_tbgd,
+        'cart': cart,
     })
 
 

@@ -125,10 +125,14 @@
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             </div>
-                            <div class="product-price">
-                                <h3>{{ product.price|floatformat:0|intcomma }}<span>đ</span></h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Mua ngay</a>
-                            </div>
+                            <form method="post" action="{% url 'cart:buy_now' product.pk %}">
+                                {% csrf_token %}
+                                <div class="product-price">
+                                    <h3>{{ product.price|floatformat:0|intcomma }}<span>đ</span></h3>
+                                    <button type="submit" class="btn"><i class="fa fa-shopping-cart"></i>Mua ngay</button>
+                                    <input name="quantity" type="hidden" value="1">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 {% endfor %}
@@ -175,10 +179,14 @@
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             </div>
-                            <div class="product-price">
-                                <h3>{{ product.price|floatformat:0|intcomma }}<span>đ</span></h3>
-                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Mua ngay</a>
-                            </div>
+                            <form method="post" action="{% url 'cart:buy_now' product.pk %}">
+                                {% csrf_token %}
+                                <div class="product-price">
+                                    <h3>{{ product.price|floatformat:0|intcomma }}<span>đ</span></h3>
+                                    <button type="submit" class="btn"><i class="fa fa-shopping-cart"></i>Mua ngay</button>
+                                    <input name="quantity" type="hidden" value="1">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 {% endfor %}
