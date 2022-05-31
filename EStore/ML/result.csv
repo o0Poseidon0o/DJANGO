@@ -1,0 +1,7 @@
+,antecedents,consequents,antecedent support,consequent support,support,confidence,lift,leverage,conviction
+0,frozenset({'Kidney Beans'}),frozenset({'Corn'}),0.5,0.4,0.3,0.6,1.4999999999999998,0.09999999999999998,1.4999999999999998
+1,frozenset({'Corn'}),frozenset({'Kidney Beans'}),0.4,0.5,0.3,0.7499999999999999,1.4999999999999998,0.09999999999999998,1.9999999999999991
+2,frozenset({'Kidney Beans'}),frozenset({'Milk'}),0.5,0.4,0.3,0.6,1.4999999999999998,0.09999999999999998,1.4999999999999998
+3,frozenset({'Milk'}),frozenset({'Kidney Beans'}),0.4,0.5,0.3,0.7499999999999999,1.4999999999999998,0.09999999999999998,1.9999999999999991
+4,frozenset({'Nutmeg'}),frozenset({'Onion'}),0.3,0.4,0.3,1.0,2.5,0.18,inf
+5,frozenset({'Onion'}),frozenset({'Nutmeg'}),0.4,0.3,0.3,0.7499999999999999,2.4999999999999996,0.18,2.7999999999999985
