@@ -1,12 +1,54 @@
+
 - Create Virtual Enviroment
 (Luu y: Den thu muc chua project roi moi dung lenh nay)
     # python-m venv ll_env
 - Active the virtual Enviroment
     # source ll_env/bin/activate
-- Stop using a Virtual Enviroment
+- Stop using a Virtual Enviroment:
     # deactivate
-- Installing Django
+
+
+- Installing Django:
     #pip install django
 - Create project:
-    #django-admin startproject <ten project>
-- 
+    #django-admin startproject <Name project>
+- Create app:
+    #python manage startapp <Name app>
+- Create directory app
+    <Name Project>/<Name app>/templates/<Name app>
+    <Name Project>/<Name app>/static/<Name app>
+- Setting project run app:
+    Step 1: In project -> setting.py
+    * Add Name-app in project.
+        INSTALLED_APPS = [
+            'django.contrib.admin',
+            'django.contrib.auth',
+            'django.contrib.contenttypes',
+            'django.contrib.sessions',
+            'django.contrib.messages',
+            'django.contrib.staticfiles',
+            '<Name-app>'
+        ]
+    Step 2: In Project,urls.py copy to the app. Next, Fix urls code in app.
+        from django.contrib import admin
+        from django.urls import path
+        from <Name app>.views import *
+
+        app_name='<Name app>'
+        urlpatterns = [
+            path('', index, name='index'),
+        ]
+    Step 3: In app fix views.py
+        from django.shortcuts import render
+
+        # Create your views here.
+        def index(request):
+
+        return render(request,'<Name app>/index.html')
+
+
+- Run project:
+    #python manage.py runserver
+
+- Install Ckeditor
+    #pip install django-ckeditor
