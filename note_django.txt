@@ -1,0 +1,12 @@
+- Create Virtual Enviroment
+(Luu y: Den thu muc chua project roi moi dung lenh nay)
+    # python-m venv ll_env
+- Active the virtual Enviroment
+    # source ll_env/bin/activate
+- Stop using a Virtual Enviroment
+    # deactivate
+- Installing Django
+    #pip install django
+- Create project:
+    #django-admin startproject <ten project>
+- 
