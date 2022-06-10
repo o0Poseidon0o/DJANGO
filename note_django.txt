@@ -13,7 +13,7 @@
 - Create project:
     #django-admin startproject <Name project>
 - Create app:
-    #python manage startapp <Name app>
+    #python manage.py startapp <Name app>
 - Create directory app
     <Name Project>/<Name app>/templates/<Name app>
     <Name Project>/<Name app>/static/<Name app>
