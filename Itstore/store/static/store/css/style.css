@@ -1,0 +1,19 @@
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+h1{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
+}
+a{
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+}
+a:hover{
+    color: aqua;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
