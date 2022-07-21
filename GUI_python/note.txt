@@ -1,3 +1,0 @@
-Để chuyển file py sang exe 
-B1: pip install pyinstaller
-B2: pyinstaller --onefile -w <ten file>.py
