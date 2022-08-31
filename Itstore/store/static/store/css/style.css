@@ -4,9 +4,9 @@ p {
 }
 #demo{
     color: red;
+    font-size: larger;
 }
 h1{
-    color:yellow;
     font-family: 'Times New Roman', Times, serif;
     font-size:xx-large;
 }
@@ -23,9 +23,18 @@ a:hover{
 .container-fluid
 {
     color: red;
-    background-color: yellow;
+    border-color: blue;
+    text-align: center;
 }
-body
+a.navbar-brand
 {
-    background: yellow;
+    color: blue;
+}
+p.footer
+{
+    text-align: left;
+}
+a.dropdown-menu
+{
+    color: red;
 }
