@@ -52,3 +52,6 @@
 
 - Install Ckeditor
     #pip install django-ckeditor
+- Install Pillow 
+    #python -m pip install Pillow
+    

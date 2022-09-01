@@ -3,7 +3,7 @@ p {
     color: aliceblue;
 }
 #demo{
-    color:yellow;
+    color:red;
     font-size: larger;
 }
 h1{
@@ -22,26 +22,15 @@ a:hover{
 }
 .container-fluid
 {
-    color: red;
-    border-color: blue;
     text-align: center;
+    border-style: double;
+    color: red;
+    background-color: aqua;
 }
-a.navbar-brand
-{
-    color: blue;
-}
-p.footer
-{
-    text-align: left;
-    color: burlywood;
-}
+
 a.dropdown-menu
 {
     color: red;
     border: 2cm;
     border-color: red;
-}
-.btn-outline-success
-{
-    color: green;
 }
