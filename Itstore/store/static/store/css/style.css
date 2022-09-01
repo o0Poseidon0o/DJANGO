@@ -3,7 +3,7 @@ p {
     color: aliceblue;
 }
 #demo{
-    color: red;
+    color:yellow;
     font-size: larger;
 }
 h1{
@@ -33,8 +33,15 @@ a.navbar-brand
 p.footer
 {
     text-align: left;
+    color: burlywood;
 }
 a.dropdown-menu
 {
     color: red;
+    border: 2cm;
+    border-color: red;
+}
+.btn-outline-success
+{
+    color: green;
 }
